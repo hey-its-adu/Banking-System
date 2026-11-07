@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking System</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Banking System</h1>
+ 
+  <form action="/balance" method="GET">
+    <h2>Balance</h2>
+    <label>Enter Account Id:</label>
+
+    <input type="number" name="acc_id" required>
+
+    <button type="submit">Balance</button>
+
+</form>
+
+
+    
+
+    <form action="/deposit" method="POST">
+        <h2>Deposit Money</h2>
+        <label for="amount">Enter Deposit Amount:</label>
+        <input  id="amount" type="number" name="amount" required>
+        <br>
+        <label>Enter Account Id:</label>
+
+    <input type="number" name="acc_id" required>
+
+        
+
+        <button type="submit">Deposit</button>
+
+    </form>
+    <form action="/withdraw" method="POST">
+    <h2>Withdraw Money</h2>
+    <label for="withdraw_amount">Enter Withdraw amount:</label>
+       <input id="withdraw_amount" type="number" name="withdraw_amount" required>
+    <br>
+    <label>Enter Account Id:</label>
+
+    <input type="number" name="acc_id" required>
+ 
+    <button type="submit">Withdraw</button>
+    </form>
+    <form action="/history" method="GET">
+        <h2>Transaction History</h2>
+        <input type="number" name="acc_id" required>
+        <button type="submit">History</button>
+
+    </form>
+
+</body>
+</html>

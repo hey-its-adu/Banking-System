@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transaction</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> </head>
+<body>
+         <h2>Account Transaction History-{{account_id}}</h2>
+    <table>
+        <tr>
+            
+            <th>Transaction Type</th>
+            <th>Amount</th>
+            <th>Remaining Balance</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{transaction['type']}}</td>
+            <td>{{transaction['amount']}}</td>
+            <td>{{transaction['balance']}}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>
+</html>
